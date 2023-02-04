@@ -1,0 +1,66 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerFile": "Dockerfile",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/black:2": {},
+		"ghcr.io/devcontainers-contrib/features/coverage-py:2": {},
+		"ghcr.io/devcontainers-contrib/features/flake8:2": {},
+		"ghcr.io/devcontainers-contrib/features/mypy:2": {},
+		"ghcr.io/devcontainers-contrib/features/pylint:2": {},
+		"ghcr.io/devcontainers-contrib/features/bandit:2": {},
+		"ghcr.io/devcontainers-contrib/features/yapf:2": {},
+		
+
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt; apt-get update && apt-get install -y zsh; sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\";",
+	"settings": { 
+		"python.pythonPath": "/usr/bin/python3",
+		"python.languageServer": "Pylance",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+		"python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+		"python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+		"python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+		"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+		"python.linting.mypyPath": "/usr/local/py-utils/bin/dmypy",
+		"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+		"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+		"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+		"terminal.integrated.profiles.linux": {
+			"zsh": {
+			  "path": "/usr/bin/zsh"
+			}
+		  },
+		  "terminal.integrated.shell.linux": "/usr/bin/zsh",
+		  "terminal.integrated.defaultProfile.linux": "zsh"
+    },
+// Configure tool-specific properties.
+"customizations": {
+	// Configure properties specific to VS Code.
+	"vscode": {
+	  // Add the IDs of extensions you want installed when the container is created.
+	  "extensions": [
+		"streetsidesoftware.code-spell-checker",
+		"ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-vscode-remote.remote-containers",
+        "ms-vsliveshare.vsliveshare",
+        "ritwickdey.LiveServer",
+        "awslabs.aws-toolkit-vscode",
+        "awslabs.aws-sam-vscode",
+        "ms-vscode.vscode-python-extension-pack",
+        "aws-toolkit-vscode.aws-toolkit-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-python.copilot"
+	  ]
+	}
+  }
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

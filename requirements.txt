@@ -1,0 +1,9 @@
+pylint
+mypy
+black
+pytest
+yapf
+flake8
+argparse
+pysftp
+paramiko 
